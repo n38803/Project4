@@ -3,6 +3,7 @@
 // 1/31/2013
 // Assignment 4
 
+// Library
 var myLibrary = function() {
 
 	// Does a string follow a 123-456-7890 pattern like a phone number?
@@ -83,59 +84,7 @@ var myLibrary = function() {
 			};	
 		};	
 	};
-		
-/*	var myString.substring(0,?){
-	
-	var end = myString.indexOf("-");
-	
-	var start = myString.indexOf("-")+1;
-	var end = myString.indexOf("-");
-	
-	var start = myString.lastIndexOf("-")+1;
-	var end = myString.length;	
-	}
-		
-*/
-	
-	
-		// Find the smallest value in an array that is greater than a given number
 
-	
-
-	//CHECK NUMERIC FUNCTION
-	var checkNumeric = function(val){
-		if (isNaN(val)){
-			return false;
-		} else {
-			return true;
-		}
-	}
-	
-	// NAME FUNCTION
-	var areYouLee = function(val){
-		if (val === "Lee"){
-			return true;
-		} else {
-			return false;
-		}
-	
-	}
-	
-	// CHECK STRING PATTERN
-	var checkString = function(val){
-	
-		var strLen = val.length;
-		for (var i=0; 1 <= strLen; i++){
-			if (val.substring(i, i+1) === "-"){
-				return i;
-			}
-		};
-	
-	}
-	
-	
-	
-	
 	//library return
 	return {
 		"checkPhone": checkPhone,
@@ -146,10 +95,9 @@ var myLibrary = function() {
 		"findNum": findNum,
 	}
 
-
-
 };
 
+// Outputs
 var newLib = new myLibrary();
 console.log("Assignment 4 - Function Library (6)");
 console.log("----------------------------------------");
@@ -159,7 +107,7 @@ console.log("3. Is this a URL address?: " + newLib.checkURL("https://success.com
 console.log("4. Change sentence to capitals: " + newLib.capslock("hello my name is shaun"));
 console.log("5. Change a string to a number: (following line)");
 console.log(newLib.changeNum("42"));
-console.log("6. Find the smallest value in an array that is greater than a given number: " + newLib.findNum([2, 4, 6, 8, 10], 5));
+console.log("6. Find the smallest value in an array that is greater than a given number: " + newLib.findNum([1,4,7,9,10,14,15], 12));
 
 
 
