@@ -35,12 +35,10 @@ var myLibrary = function() {
 		if (noSpace <= 0 && address === email){
 			return true;
 		} else {
-			console.log("No Spaces Allowed!");
 			return false;			
 
 		};
 	};
-
 
 	// Is the string a URL? (Does it start with http: or https:?)
 	var checkURL = function(url){
@@ -51,13 +49,10 @@ var myLibrary = function() {
 		if(protocol === "https://" || protocol === "http://"){
 			return true;
 		} else {
-			return false;
-		
+			return false;		
 		};
-
 	};
 	
-
 	// Title-case a string (split into words, then uppercase the first letter of each word).	
 	var capslock = function(sentence) {
    		var words = sentence.split(" "),
@@ -71,7 +66,6 @@ var myLibrary = function() {
    		return charArray.join(" ");
 	};
 	
-
 	// Given a string version of a number, such as “42”, return the value as an actual Number data type, such as 42.
 	var changeNum = function(value){
 		return parseFloat(value);
@@ -86,7 +80,7 @@ var myLibrary = function() {
 		};	
 	};
 
-	//library return
+	// Library Returns
 	return {
 		"checkPhone": checkPhone,
 		"checkEmail": checkEmail,
