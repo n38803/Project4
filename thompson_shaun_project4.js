@@ -75,6 +75,14 @@ var myLibrary = function() {
 		return parseFloat(value);
 	};
 	
+	// Find the smallest value in an array that is greater than a given number.	
+	var findNum = function(array, val){
+		for(i=0, y=val; i <= y; i++){
+			if (array[i] >= y){
+				return array[i];
+			};	
+		};	
+	};
 		
 /*	var myString.substring(0,?){
 	
@@ -135,10 +143,7 @@ var myLibrary = function() {
 		"checkURL": checkURL, 
 		"capslock": capslock,
 		"changeNum": changeNum,
-		
-		"checkNumeric": checkNumeric,
-		"areYouLee": 	areYouLee,
-		"checkString":	checkString
+		"findNum": findNum,
 	}
 
 
@@ -154,15 +159,8 @@ console.log("3. Is this a URL address?: " + newLib.checkURL("https://success.com
 console.log("4. Change sentence to capitals: " + newLib.capslock("hello my name is shaun"));
 console.log("5. Change a string to a number: (following line)");
 console.log(newLib.changeNum("42"));
+console.log("6. Find the smallest value in an array that is greater than a given number: " + newLib.findNum([2, 4, 6, 8, 10], 5));
 
-
-console.log("----------------------------------------");
-console.log("Assignment 4 - Extra Credit");
-console.log("----------------------------------------");
-
-console.log("Is this a number?: " + newLib.checkNumeric(156));
-console.log("Is this Lee?: " + newLib.areYouLee("Lee"));
-console.log("The dash is in the position: " + newLib.checkString("123-456"));
 
 
 
