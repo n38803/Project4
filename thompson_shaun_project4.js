@@ -54,34 +54,18 @@ var myLibrary = function() {
 
 	};
 	
-	// Title-case a string (split into words, then uppercase the first letter of each word).
-/*	var capslock = function(sentence) {
-		var first = 	sentence.indexOf(" "),
-			second = 	sentence.indexOf(" "+1),
-			caps = 		sentence.charAt(0).toUpperCase() + sentence.slice(1);
-			
-				console.log(sentence);
-				console.log(firstWrd);
-			
-				sentence.substring(0, first);
-				sentence.substring(first, second);
-			
-		for (var i=sentence.length, y=first, z=second; i>y; z++){
-		};
-			
-		
-		
-			};
-			
-		var strLen = sentence.length;
-		for (var i=0; 1 <= strLen; i++){
-			if (sentence.substring(i, i+1) === " "){
-				return i;
-			}
-			
-		return caps;
-		};
-*/			
+	// Title-case a string (split into words, then uppercase the first letter of each word).	
+	var capslock = function (sentence) {
+   		var words = sentence.split(" ");
+   		var charArray = Array();
+   		for (character in words){
+      		change = words[character].toLowerCase();
+      		change = change.charAt(0).toUpperCase() + change.substring(1);
+      		array.push(temp);
+   		};
+   		return charArray.join(" ");
+	};
+	
 
 
 		
@@ -148,7 +132,7 @@ var myLibrary = function() {
 		"checkPhone": checkPhone,
 		"checkEmail": checkEmail,
 		"checkURL": checkURL, 
-/*		"capslock": capslock,*/
+		"capslock": capslock,
 		"checkNumeric": checkNumeric,
 		"areYouLee": 	areYouLee,
 		"checkString":	checkString
@@ -164,7 +148,7 @@ console.log("----------------------------------------");
 console.log("1. Is this a phone number?: " + newLib.checkPhone("111-111-1111"));
 console.log("2. Is this an email address?: " + newLib.checkEmail("ShaunThompson@live.com"));
 console.log("3. Is this a URL address?: " + newLib.checkURL("https://success.com")); 
-/*console.log("4. Change sentence to capitals: " + newLib.capslock("hello my name is shaun"));*/
+console.log("4. Change sentence to capitals: " + newLib.capslock("hello my name is shaun"));
  
 
 console.log("----------------------------------------");
