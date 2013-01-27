@@ -25,19 +25,20 @@ var myLibrary = function() {
 	
 	// Does a string follow an aaa@bbb.ccc pattern like an email address?
 	var checkEmail = function(address){
-		var at = address.indexOf("@"),
+		var noSpace = address.lastIndexOf(" "),
+			at = address.indexOf("@"),
 			com = address.lastIndexOf(".com"),
 			username = address.substring(0, at),
 			server = address.substring(at+1, com),
 			email = username + "@" + server + ".com";
-		
-		if (address === email){
+	
+		if (noSpace <= 0 && address === email){
 			return true;
 		} else {
-			return false;
-		
+			console.log("No Spaces Allowed!");
+			return false;			
+
 		};
-		
 	};
 
 
