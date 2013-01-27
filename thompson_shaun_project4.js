@@ -39,6 +39,7 @@ var myLibrary = function() {
 		
 	};
 
+
 	// Is the string a URL? (Does it start with http: or https:?)
 	var checkURL = function(url){
 		var hypertext = url.lastIndexOf("/"),
@@ -54,25 +55,25 @@ var myLibrary = function() {
 
 	};
 	
+
 	// Title-case a string (split into words, then uppercase the first letter of each word).	
-	var capslock = function (sentence) {
-   		var words = sentence.split(" ");
-   		var charArray = Array();
+	var capslock = function(sentence) {
+   		var words = sentence.split(" "),
+   			charArray = Array();
+   			
    		for (character in words){
       		change = words[character].toLowerCase();
       		change = change.charAt(0).toUpperCase() + change.substring(1);
-      		array.push(temp);
+      		charArray.push(change);
    		};
    		return charArray.join(" ");
 	};
 	
 
-
-		
-
-
-
-
+	// Given a string version of a number, such as “42”, return the value as an actual Number data type, such as 42.
+	var changeNum = function(value){
+		return parseFloat(value);
+	};
 	
 		
 /*	var myString.substring(0,?){
@@ -133,6 +134,8 @@ var myLibrary = function() {
 		"checkEmail": checkEmail,
 		"checkURL": checkURL, 
 		"capslock": capslock,
+		"changeNum": changeNum,
+		
 		"checkNumeric": checkNumeric,
 		"areYouLee": 	areYouLee,
 		"checkString":	checkString
@@ -149,7 +152,9 @@ console.log("1. Is this a phone number?: " + newLib.checkPhone("111-111-1111"));
 console.log("2. Is this an email address?: " + newLib.checkEmail("ShaunThompson@live.com"));
 console.log("3. Is this a URL address?: " + newLib.checkURL("https://success.com")); 
 console.log("4. Change sentence to capitals: " + newLib.capslock("hello my name is shaun"));
- 
+console.log("5. Change a string to a number: (following line)");
+console.log(newLib.changeNum("42"));
+
 
 console.log("----------------------------------------");
 console.log("Assignment 4 - Extra Credit");
