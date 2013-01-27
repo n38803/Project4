@@ -53,27 +53,42 @@ var myLibrary = function() {
 		};
 
 	};
+	
+	// Title-case a string (split into words, then uppercase the first letter of each word).
+/*	var capslock = function(sentence) {
+		var first = 	sentence.indexOf(" "),
+			second = 	sentence.indexOf(" "+1),
+			caps = 		sentence.charAt(0).toUpperCase() + sentence.slice(1);
+			
+				console.log(sentence);
+				console.log(firstWrd);
+			
+				sentence.substring(0, first);
+				sentence.substring(first, second);
+			
+		for (var i=sentence.length, y=first, z=second; i>y; z++){
+		};
+			
+		
+		
+			};
+			
+		var strLen = sentence.length;
+		for (var i=0; 1 <= strLen; i++){
+			if (sentence.substring(i, i+1) === " "){
+				return i;
+			}
+			
+		return caps;
+		};
+*/			
+
+
 		
 
 
 
 
-/*	var checkURL = function(url) {
-		var http = 	(number.substring(0,8)),
-			https = (number.substring(0,9));
-
-	
-		if (url == http || url == https){
-			return true;
-
-		} else {
-			console.log("This is not the correct URL.");
-			return false;
-		};	
-	
-*/	
-	
-	
 	
 		
 /*	var myString.substring(0,?){
@@ -133,6 +148,7 @@ var myLibrary = function() {
 		"checkPhone": checkPhone,
 		"checkEmail": checkEmail,
 		"checkURL": checkURL, 
+/*		"capslock": capslock,*/
 		"checkNumeric": checkNumeric,
 		"areYouLee": 	areYouLee,
 		"checkString":	checkString
@@ -143,10 +159,18 @@ var myLibrary = function() {
 };
 
 var newLib = new myLibrary();
+console.log("Assignment 4 - Function Library (6)");
+console.log("----------------------------------------");
+console.log("1. Is this a phone number?: " + newLib.checkPhone("111-111-1111"));
+console.log("2. Is this an email address?: " + newLib.checkEmail("ShaunThompson@live.com"));
+console.log("3. Is this a URL address?: " + newLib.checkURL("https://success.com")); 
+/*console.log("4. Change sentence to capitals: " + newLib.capslock("hello my name is shaun"));*/
+ 
 
-console.log("Is this a phone number?: " + newLib.checkPhone("111-111-1111"));
-console.log("Is this an email address?: " + newLib.checkEmail("ShaunThompson@live.com"));
-console.log("Is this a URL address?: " + newLib.checkURL("https://success.com")); 
+console.log("----------------------------------------");
+console.log("Assignment 4 - Extra Credit");
+console.log("----------------------------------------");
+
 console.log("Is this a number?: " + newLib.checkNumeric(156));
 console.log("Is this Lee?: " + newLib.areYouLee("Lee"));
 console.log("The dash is in the position: " + newLib.checkString("123-456"));
